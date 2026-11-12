@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="320" height="220">
+  <rect width="320" height="220" fill="#091f34" rx="10"/>
+  <g transform="translate(160, 120)">
+    <!-- Aerodynamic Pump Body -->
+    <ellipse cx="0" cy="0" rx="55" ry="36" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+    <!-- Accent Line -->
+    <path d="M -45 -5 Q 0 -18 45 -5" stroke="#20B8B0" stroke-width="3" fill="none"/>
+    <!-- Dual Outlets -->
+    <rect x="48" y="-12" width="12" height="7" rx="2" fill="#94a3b8"/>
+    <rect x="48" y="5" width="12" height="7" rx="2" fill="#94a3b8"/>
+    <!-- Rubber feet -->
+    <rect x="-40" y="32" width="12" height="6" rx="2" fill="#020617"/>
+    <rect x="28" y="32" width="12" height="6" rx="2" fill="#020617"/>
+    <!-- Rising oxygen bubbles -->
+    <circle cx="75" cy="5" r="3" fill="#ffffff" opacity="0.6"/>
+    <circle cx="85" cy="-18" r="4.5" fill="#ffffff" opacity="0.7"/>
+    <circle cx="78" cy="-45" r="6" fill="#ffffff" opacity="0.8"/>
+  </g>
+</svg>

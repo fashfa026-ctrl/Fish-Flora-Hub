@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        (function() {
+            try {
+                var theme = localStorage.getItem('fish_flora_theme') || 'dark';
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch(e) {}
+        })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Care Guide & Interactive Quiz | Fish & Flora Hub</title>
+    <meta name="description" content="Comprehensive aquarium care guides covering nitrogen cycle, feeding schedules, water parameters, and fish quiz.">
+    <!-- Font Awesome 6.7.2 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=2.9">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link" aria-label="Fish & Flora Hub Home">
+                <img src="images/logo.png" alt="Fish & Flora Hub Logo" class="logo-img">
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="fish.html" class="nav-link">Fish</a></li>
+                    <li><a href="plants.html" class="nav-link">Plants</a></li>
+                    <li><a href="accessories.html" class="nav-link">Accessories</a></li>
+                    <li><a href="care-guide.html" class="nav-link active">Care Guide</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button type="button" class="header-icon-btn theme-toggle-btn" title="Toggle Light/Dark Theme" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon theme-icon"></i>
+                </button>
+
+                <button type="button" class="wishlist-icon-btn" onclick="openWishlistModal()" title="My Wishlist" aria-label="My Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="wishlist-badge">0</span>
+                </button>
+
+                <a href="cart.html" class="cart-icon-btn" title="Shopping Cart" aria-label="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping" style="font-size: 1.15rem;"></i>
+                    <span class="cart-badge">0</span>
+                </a>
+
+                <button type="button" class="mobile-nav-toggle" aria-label="Open mobile menu" aria-expanded="false">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner page-banner-care">
+        <div class="page-banner-overlay"></div>
+        <div class="container page-banner-container">
+            <h1 class="page-banner-title">Fish Care Guide</h1>
+            <p class="page-banner-subtitle">Tips, educational guides, and resources for a thriving, healthy aquarium.</p>
+        </div>
+    </section>
+
+    <!-- Main Content: Vertical Tabs & Quiz -->
+    <section class="section">
+        <div class="container">
+            <div class="care-guide-layout">
+                <!-- Left Tabs Navigation -->
+                <nav class="care-tabs-nav" aria-label="Care Guide Topics">
+                    <button type="button" class="care-tab-btn active" data-tab-target="tab-beginner">
+                        <span>🌱</span> Beginner's Guide
+                    </button>
+                    <button type="button" class="care-tab-btn" data-tab-target="tab-feeding">
+                        <span>🥣</span> Feeding Guide
+                    </button>
+                    <button type="button" class="care-tab-btn" data-tab-target="tab-water">
+                        <span>💧</span> Water Quality
+                    </button>
+                    <button type="button" class="care-tab-btn" data-tab-target="tab-plants">
+                        <span>🌿</span> Aquatic Plants
+                    </button>
+                    <button type="button" class="care-tab-btn" data-tab-target="tab-mistakes">
+                        <span>⚠️</span> Common Mistakes
+                    </button>
+                </nav>
+
+                <!-- Right Content Panels -->
+                <main class="care-panels-wrap">
+                    <!-- Tab 1: Beginner's Guide -->
+                    <div id="tab-beginner" class="care-tab-panel active">
+                        <h2 class="section-title">Beginner's Step-by-Step Guide</h2>
+                        <p class="mb-4 text-muted">Starting your first aquarium is rewarding when done step by step. Follow this proven roadmap:</p>
+
+                        <div class="care-step-card">
+                            <div class="care-step-num">1</div>
+                            <div>
+                                <h4 class="mb-1">Choose a Suitable Tank Size</h4>
+                                <p>Beginners often mistakenly choose tiny bowls (< 10L). Larger aquariums (30L to 60L) dilute wastes better and keep temperature and water chemistry far more stable.</p>
+                            </div>
+                        </div>
+
+                        <div class="care-step-card">
+                            <div class="care-step-num">2</div>
+                            <div>
+                                <h4 class="mb-1">Set Up Your Equipment</h4>
+                                <p>Rinse gravel substrate thoroughly with clean water (no soap). Install the filter, heater, and thermometer. Fill with dechlorinated tap water and ensure the filter runs smoothly.</p>
+                            </div>
+                        </div>
+
+                        <div class="care-step-card">
+                            <div class="care-step-num">3</div>
+                            <div>
+                                <h4 class="mb-1">Cycle the Tank (Crucial Step!)</h4>
+                                <p>Never introduce fish into a freshly filled tank on day one. Allow 2 to 4 weeks for beneficial bacteria colonies to establish, converting toxic ammonia into harmless nitrates.</p>
+                            </div>
+                        </div>
+
+                        <div class="care-step-card">
+                            <div class="care-step-num">4</div>
+                            <div>
+                                <h4 class="mb-1">Add Fish Gradually</h4>
+                                <p>Introduce only 2 to 3 hardy fish first. Float the fish bag in the tank for 15-20 minutes to equalize water temperature before releasing the fish gently.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2: Feeding Guide -->
+                    <div id="tab-feeding" class="care-tab-panel">
+                        <h2 class="section-title">Aquarium Fish Feeding Guide</h2>
+                        <p class="mb-4 text-muted">Proper nutrition ensures vibrant coloration, energetic swimming, and prevents water fouling.</p>
+
+                        <div class="care-step-card">
+                            <div class="care-step-num">⏱️</div>
+                            <div>
+                                <h4 class="mb-1">The Golden 2-Minute Rule</h4>
+                                <p>Feed only the amount of food your fish can completely consume within 2 minutes. Any uneaten food sinks to the gravel and rapidly decays into toxic ammonia.</p>
+                            </div>
+                        </div>
+
+                        <div class="care-step-card">
+                            <div class="care-step-num">🥗</div>
+                            <div>
+                                <h4 class="mb-1">Diet Variety</h4>
+                                <p>Combine high-quality flake or pellet staple foods with occasional frozen bloodworms, daphnia, or spirulina greens for balanced vitamins and digestion.</p>
+                            </div>
+                        </div>
+
+                        <div class="care-step-card">
+                            <div class="care-step-num">📅</div>
+                            <div>
+                                <h4 class="mb-1">Feeding Schedule</h4>
+                                <p>Feed adult fish once or twice daily. Providing one "fasting day" per week helps clear their digestive tract and promotes natural grazing behavior.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 3: Water Quality -->
+                    <div id="tab-water" class="care-tab-panel">
+                        <h2 class="section-title">Water Quality &amp; The Nitrogen Cycle</h2>
+                        <p class="mb-4 text-muted">Water parameters are invisible to the eye; regular testing and water changes are the heart of fishkeeping.</p>
+
+                        <!-- Infographic -->
+                        <div class="text-center mb-4">
+                            <img src="images/nitrogen-cycle.svg" alt="Aquarium Nitrogen Cycle Diagram" style="margin: 0 auto; border-radius: var(--radius-md);">
+                        </div>
+
+                        <h3 class="mb-2">Ideal Freshwater Parameters:</h3>
+                        <table class="care-table">
+                            <thead>
+                                <tr>
+                                    <th>Parameter</th>
+                                    <th>Target Range</th>
+                                    <th>Health Impact</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Ammonia (NH3)</strong></td>
+                                    <td>0.0 ppm</td>
+                                    <td>Extremely toxic; causes gill burns and lethargy.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Nitrite (NO2)</strong></td>
+                                    <td>0.0 ppm</td>
+                                    <td>Toxic; impairs oxygen transport in fish blood.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Nitrate (NO3)</strong></td>
+                                    <td>&lt; 20 ppm</td>
+                                    <td>Low toxicity; managed via weekly 25% water changes.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>pH Level</strong></td>
+                                    <td>6.5 – 7.5</td>
+                                    <td>Must remain stable; sudden swings cause shock.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Water Temp</strong></td>
+                                    <td>24°C – 27°C</td>
+                                    <td>Maintained constantly using an automatic heater.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Tab 4: Aquatic Plants -->
+                    <div id="tab-plants" class="care-tab-panel">
+                        <h2 class="section-title">Aquatic Plant Maintenance</h2>
+                        <p class="mb-4 text-muted">Living plants act as biological powerhouses, absorbing fish nitrates and releasing oxygen.</p>
+
+                        <div class="care-step-card">
+                            <div class="care-step-num">☀️</div>
+                            <div>
+                                <h4 class="mb-1">Lighting Schedule</h4>
+                                <p>Run aquarium lights for 6 to 8 hours per day on a consistent timer. Running lights for more than 10 hours invites heavy green algae blooms.</p>
+                            </div>
+                        </div>
+
+                        <div class="care-step-card">
+                            <div class="care-step-num">🌱</div>
+                            <div>
+                                <h4 class="mb-1">Root Feeding vs Water Column Feeders</h4>
+                                <p>Plants like Amazon Swords absorb nutrients primarily through their roots (use root tabs). Epiphytes like Java Fern and Anubias feed directly from the water column.</p>
+                            </div>
+                        </div>
+
+                        <div class="care-step-card">
+                            <div class="care-step-num">✂️</div>
+                            <div>
+                                <h4 class="mb-1">Trimming &amp; Pruning</h4>
+                                <p>Regularly snip dead or yellowing leaves near the plant base to direct vitality towards new, fresh green sprouts.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 5: Common Mistakes -->
+                    <div id="tab-mistakes" class="care-tab-panel">
+                        <h2 class="section-title">Common Mistakes to Avoid</h2>
+                        <p class="mb-4 text-muted">Steer clear of these 4 classic pitfalls to keep your aquatic pets thriving:</p>
+
+                        <div class="care-step-card" style="border-left-color: var(--color-accent-coral);">
+                            <div class="care-step-num" style="background-color: var(--color-accent-coral);">1</div>
+                            <div>
+                                <h4 class="mb-1">Washing Filter Sponges Under Tap Water</h4>
+                                <p>Chlorinated tap water instantly kills the beneficial nitrifying bacteria living inside your filter. Always rinse filter sponges in old tank water removed during water changes.</p>
+                            </div>
+                        </div>
+
+                        <div class="care-step-card" style="border-left-color: var(--color-accent-coral);">
+                            <div class="care-step-num" style="background-color: var(--color-accent-coral);">2</div>
+                            <div>
+                                <h4 class="mb-1">Overstocking the Tank</h4>
+                                <p>Putting too many fish in a small tank quickly overloads biological filtration, depletes dissolved oxygen, and causes territorial stress.</p>
+                            </div>
+                        </div>
+
+                        <div class="care-step-card" style="border-left-color: var(--color-accent-coral);">
+                            <div class="care-step-num" style="background-color: var(--color-accent-coral);">3</div>
+                            <div>
+                                <h4 class="mb-1">Changing 100% of the Water at Once</h4>
+                                <p>Complete water changes cause severe temperature and chemical shock to fish. Stick to routine weekly 20% - 25% water changes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+            <!-- Bonus Interactive Fish Quiz -->
+            <div class="quiz-section">
+                <div class="quiz-header">
+                    <span class="quiz-badge">Interactive Tool</span>
+                    <h2>Fish Match Quiz</h2>
+                    <p class="text-muted">Answer 3 simple questions to receive personalized species recommendations tailored to your aquarium setup.</p>
+                </div>
+
+                <form id="fish-quiz-form">
+                    <div class="quiz-group">
+                        <p class="quiz-question">1. Are you new to aquarium keeping?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-radio-label">
+                                <input type="radio" name="quiz_beginner" value="yes" checked>
+                                <span>Yes, I am a beginner</span>
+                            </label>
+                            <label class="quiz-radio-label">
+                                <input type="radio" name="quiz_beginner" value="no">
+                                <span>No, I have some experience</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-group">
+                        <p class="quiz-question">2. How large is your aquarium?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-radio-label">
+                                <input type="radio" name="quiz_tank" value="small">
+                                <span>Small (under 20 Litres)</span>
+                            </label>
+                            <label class="quiz-radio-label">
+                                <input type="radio" name="quiz_tank" value="medium" checked>
+                                <span>Medium (20L – 80 Litres)</span>
+                            </label>
+                            <label class="quiz-radio-label">
+                                <input type="radio" name="quiz_tank" value="large">
+                                <span>Large (over 80 Litres)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="quiz-group">
+                        <p class="quiz-question">3. Do you prefer low-maintenance, hardy fish?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-radio-label">
+                                <input type="radio" name="quiz_maintenance" value="yes" checked>
+                                <span>Yes, low maintenance</span>
+                            </label>
+                            <label class="quiz-radio-label">
+                                <input type="radio" name="quiz_maintenance" value="no">
+                                <span>I don't mind extra care</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-primary">Get Suggestions 🎯</button>
+                    </div>
+                </form>
+
+                <!-- Container where recommendations render -->
+                <div id="quiz-results-container"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="images/logo.png" alt="Fish & Flora Hub Logo" class="footer-logo">
+                    <p>
+                        Your trusted portal for aquarium fish, healthy aquatic plants, and reliable accessories. Helping hobbyists create thriving underwater habitats.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="fish.html">Fish</a></li>
+                        <li><a href="plants.html">Plants</a></li>
+                        <li><a href="accessories.html">Accessories</a></li>
+                        <li><a href="care-guide.html">Care Guide</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fa-solid fa-location-dot"></i> 123 Golden Street, Colombo, Sri Lanka</li>
+                        <li><i class="fa-solid fa-phone"></i> +94 77 6292 797</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@fishflorahub.com</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Follow Us</h4>
+                    <div class="footer-social-links mb-3">
+                        <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://wa.me/94776292797" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <p style="font-size: 0.8rem; color: #64748b;">
+                        Educational 2nd Semester Project Demo.
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2025 Fish &amp; Flora Hub. All rights reserved.</div>
+                <div>Designed with HTML5, CSS3 &amp; JavaScript</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/script.js?v=2.9"></script>
+</body>
+</html>

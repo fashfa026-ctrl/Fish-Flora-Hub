@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+  <defs>
+    <linearGradient id="catFishBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e3a60"/>
+      <stop offset="100%" stop-color="#061c31"/>
+    </linearGradient>
+    <linearGradient id="yellowFish" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="50%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" fill="url(#catFishBg)" rx="12"/>
+  <!-- Underwater glow & plants -->
+  <circle cx="200" cy="125" r="90" fill="#20B8B0" opacity="0.15" filter="blur(20px)"/>
+  <path d="M 20 250 Q 50 160 30 80 Q 70 170 50 250 Z" fill="#22c55e" opacity="0.6"/>
+  <path d="M 370 250 Q 340 150 360 70 Q 330 160 340 250 Z" fill="#16a34a" opacity="0.6"/>
+  
+  <!-- Beautiful Tang / Tropical Fish -->
+  <g transform="translate(190, 120)">
+    <!-- Caudal tail -->
+    <polygon points="-60,0 -100,-35 -85,0 -100,35" fill="#0284c7" />
+    <!-- Dorsal and anal fins -->
+    <path d="M -30 -30 Q 10 -55 50 -25 Z" fill="#0369a1" />
+    <path d="M -20 30 Q 15 50 45 25 Z" fill="#0369a1" />
+    <!-- Disc shaped body -->
+    <path d="M -60 0 C -40 -45 30 -40 60 -10 C 70 0 70 10 60 18 C 30 45 -40 45 -60 0 Z" fill="url(#yellowFish)" />
+    <!-- Vibrant blue tail accent -->
+    <path d="M -30 -15 C -10 -5 10 -5 30 -15 Z" fill="#0284c7" opacity="0.8"/>
+    <!-- Eye -->
+    <circle cx="45" cy="-2" r="5" fill="#0f172a" />
+    <circle cx="47" cy="-3.5" r="1.8" fill="#ffffff" />
+  </g>
+  <!-- Bubbles -->
+  <circle cx="280" cy="80" r="5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="295" cy="55" r="3.5" fill="#ffffff" opacity="0.5"/>
+</svg>

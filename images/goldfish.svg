@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="320" height="220">
+  <defs>
+    <linearGradient id="bgAqua3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0c2e4e"/>
+      <stop offset="100%" stop-color="#061727"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fdba74"/>
+      <stop offset="40%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="220" fill="url(#bgAqua3)" rx="10"/>
+  <!-- Goldfish -->
+  <g transform="translate(160, 115)">
+    <!-- Wavy flowing caudal fins -->
+    <path d="M -40 5 C -90 -45 -130 -25 -125 15 C -135 60 -85 70 -40 15 Z" fill="#fb923c" opacity="0.85"/>
+    <path d="M -35 10 C -70 30 -110 50 -95 75 C -75 80 -45 50 -30 20 Z" fill="#ea580c" opacity="0.75"/>
+    <!-- Dorsal -->
+    <path d="M -15 -25 Q 10 -55 30 -20 Z" fill="#f97316"/>
+    <!-- Plump Ryukin body -->
+    <ellipse cx="5" cy="5" rx="46" ry="30" fill="url(#goldGrad)"/>
+    <!-- Belly highlight -->
+    <ellipse cx="12" cy="14" rx="30" ry="16" fill="#fed7aa" opacity="0.6"/>
+    <!-- Big cute eye -->
+    <circle cx="38" cy="-3" r="6" fill="#0f172a"/>
+    <circle cx="40" cy="-5" r="2.2" fill="#ffffff"/>
+  </g>
+</svg>

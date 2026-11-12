@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="320" height="220">
+  <rect width="320" height="220" fill="#091e33" rx="10"/>
+  <g transform="translate(160, 130)">
+    <!-- Base Cave Rock -->
+    <path d="M -70 40 Q -70 -10 -20 -15 Q 40 -10 70 40 Z" fill="#334155"/>
+    <!-- Cave Opening / Swim-through -->
+    <ellipse cx="0" cy="25" rx="22" ry="18" fill="#020617"/>
+    <!-- Coral Branches -->
+    <path d="M -40 -10 Q -60 -50 -45 -70 Q -30 -50 -35 -10" fill="#f43f5e"/>
+    <path d="M -15 -12 Q -25 -65 0 -85 Q 15 -60 10 -15" fill="#fb7185"/>
+    <path d="M 25 -10 Q 55 -55 45 -75 Q 35 -50 20 -10" fill="#f43f5e"/>
+    <!-- Coral tips -->
+    <circle cx="-45" cy="-70" r="4" fill="#fecdd3"/>
+    <circle cx="0" cy="-85" r="5" fill="#fecdd3"/>
+    <circle cx="45" cy="-75" r="4" fill="#fecdd3"/>
+  </g>
+</svg>

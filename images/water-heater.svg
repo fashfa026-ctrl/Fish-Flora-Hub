@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="320" height="220">
+  <rect width="320" height="220" fill="#0b1e32" rx="10"/>
+  <!-- Submersible Heater (diagonal) -->
+  <g transform="translate(160, 110) rotate(-40)">
+    <!-- Dial / Thermostat Knob -->
+    <rect x="-14" y="-85" width="28" height="20" rx="4" fill="#0f172a" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="0" cy="-75" r="4" fill="#0284c7"/>
+    <!-- Glass Tube -->
+    <rect x="-10" y="-65" width="20" height="150" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5" opacity="0.85"/>
+    <!-- Heating Coil Element -->
+    <path d="M -6 -15 L 6 -10 L -6 -5 L 6 0 L -6 5 L 6 10 L -6 15 L 6 20 L -6 25 L 6 30 L -6 35 L 6 40 L -6 45 L 6 50" stroke="#ef4444" stroke-width="2.5" fill="none"/>
+    <!-- Status Indicator LED -->
+    <circle cx="0" cy="-45" r="3.5" fill="#ef4444" filter="drop-shadow(0px 0px 4px #ef4444)"/>
+    <!-- Suction cups -->
+    <ellipse cx="14" cy="-35" rx="5" ry="9" fill="#475569"/>
+    <ellipse cx="14" cy="25" rx="5" ry="9" fill="#475569"/>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" width="600" height="220">
+  <rect width="600" height="220" fill="#081e33" rx="12"/>
+  <text x="300" y="28" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="bold" fill="#20B8B0" text-anchor="middle">THE AQUARIUM NITROGEN CYCLE</text>
+  
+  <!-- Step 1: Fish Waste / Ammonia -->
+  <g transform="translate(80, 110)">
+    <circle cx="0" cy="0" r="42" fill="#1e293b" stroke="#ef4444" stroke-width="2.5"/>
+    <text x="0" y="-8" font-family="sans-serif" font-size="20" text-anchor="middle">🐟</text>
+    <text x="0" y="10" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ef4444" text-anchor="middle">AMMONIA</text>
+    <text x="0" y="24" font-family="sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">(NH3 - Toxic)</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 135 110 L 195 110" stroke="#f59e0b" stroke-width="3" marker-end="url(#arrow)" stroke-dasharray="4 2"/>
+  <text x="165" y="100" font-family="sans-serif" font-size="8.5" fill="#f59e0b" text-anchor="middle">Nitrosomonas</text>
+
+  <!-- Step 2: Nitrite -->
+  <g transform="translate(250, 110)">
+    <circle cx="0" cy="0" r="42" fill="#1e293b" stroke="#f59e0b" stroke-width="2.5"/>
+    <text x="0" y="-8" font-family="sans-serif" font-size="20" text-anchor="middle">🧪</text>
+    <text x="0" y="10" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f59e0b" text-anchor="middle">NITRITE</text>
+    <text x="0" y="24" font-family="sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">(NO2 - Toxic)</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 305 110 L 365 110" stroke="#22c55e" stroke-width="3" stroke-dasharray="4 2"/>
+  <text x="335" y="100" font-family="sans-serif" font-size="8.5" fill="#22c55e" text-anchor="middle">Nitrobacter</text>
+
+  <!-- Step 3: Nitrate -->
+  <g transform="translate(420, 110)">
+    <circle cx="0" cy="0" r="42" fill="#1e293b" stroke="#22c55e" stroke-width="2.5"/>
+    <text x="0" y="-8" font-family="sans-serif" font-size="20" text-anchor="middle">🌿</text>
+    <text x="0" y="10" font-family="sans-serif" font-size="11" font-weight="bold" fill="#22c55e" text-anchor="middle">NITRATE</text>
+    <text x="0" y="24" font-family="sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">(NO3 - Low Risk)</text>
+  </g>
+
+  <!-- Final step: Water change & Plant absorption -->
+  <g transform="translate(535, 110)">
+    <circle cx="0" cy="0" r="32" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+    <text x="0" y="-3" font-family="sans-serif" font-size="16" text-anchor="middle">💧</text>
+    <text x="0" y="14" font-family="sans-serif" font-size="8.5" font-weight="bold" fill="#38bdf8" text-anchor="middle">25% Change</text>
+  </g>
+</svg>

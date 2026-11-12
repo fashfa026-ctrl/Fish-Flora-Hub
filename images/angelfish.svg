@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="320" height="220">
+  <defs>
+    <linearGradient id="bgAqua4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a2846"/>
+      <stop offset="100%" stop-color="#051424"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="220" fill="url(#bgAqua4)" rx="10"/>
+  <!-- Angelfish -->
+  <g transform="translate(160, 115)">
+    <!-- Tall Dorsal -->
+    <path d="M -5 -20 L 15 -90 L 10 -15 Z" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+    <!-- Long Ventral Feelers -->
+    <path d="M 5 25 L 20 95 L 12 25 Z" fill="#e2e8f0" stroke="#475569" stroke-width="1.5"/>
+    <!-- Caudal tail -->
+    <polygon points="-30,5 -80,-30 -60,5 -80,40" fill="#cbd5e1" stroke="#475569" stroke-width="1.5"/>
+    <!-- Diamond/Triangular Body -->
+    <polygon points="45,5 0,-25 -32,5 0,35" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+    <!-- Distinct Black Stripes -->
+    <line x1="12" y1="-18" x2="12" y2="28" stroke="#0f172a" stroke-width="5"/>
+    <line x1="-8" y1="-22" x2="-8" y2="30" stroke="#0f172a" stroke-width="6"/>
+    <line x1="-22" y1="-5" x2="-22" y2="15" stroke="#0f172a" stroke-width="4"/>
+    <!-- Ruby Eye -->
+    <circle cx="28" cy="0" r="4.5" fill="#dc2626"/>
+    <circle cx="29" cy="0" r="2.2" fill="#0f172a"/>
+  </g>
+</svg>

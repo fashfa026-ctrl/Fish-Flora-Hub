@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+  <defs>
+    <linearGradient id="catAccBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c233c"/>
+      <stop offset="100%" stop-color="#061220"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" fill="url(#catAccBg)" rx="12"/>
+  <circle cx="200" cy="120" r="90" fill="#20B8B0" opacity="0.15" filter="blur(25px)"/>
+
+  <!-- Modern Rimless Tank Illustration -->
+  <rect x="70" y="60" width="260" height="150" rx="8" fill="none" stroke="#67e8f9" stroke-width="3" opacity="0.85"/>
+  <!-- Water inside tank -->
+  <rect x="73" y="85" width="254" height="122" fill="#0284c7" opacity="0.25"/>
+  <line x1="72" y1="85" x2="328" y2="85" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 2"/>
+
+  <!-- Filter on side -->
+  <rect x="52" y="75" width="26" height="70" rx="4" fill="#334155" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M 65 75 L 65 65 L 85 65 L 85 90" fill="none" stroke="#64748b" stroke-width="3"/>
+
+  <!-- LED Light on top -->
+  <rect x="110" y="42" width="180" height="10" rx="3" fill="#1e293b" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="115" y1="47" x2="285" y2="47" stroke="#38bdf8" stroke-width="3" />
+  <!-- Light mount legs -->
+  <line x1="120" y1="52" x2="100" y2="60" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="280" y1="52" x2="300" y2="60" stroke="#94a3b8" stroke-width="2"/>
+  <!-- Light beam -->
+  <polygon points="120,53 280,53 320,190 80,190" fill="#38bdf8" opacity="0.12"/>
+
+  <!-- Submersible Heater inside -->
+  <rect x="290" y="95" width="10" height="75" rx="5" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+  <circle cx="295" cy="115" r="2.5" fill="#ef4444" />
+</svg>

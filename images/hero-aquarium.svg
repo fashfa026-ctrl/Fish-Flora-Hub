@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480">
+  <defs>
+    <linearGradient id="waterDeep" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#082b4c"/>
+      <stop offset="35%" stop-color="#0B3C68"/>
+      <stop offset="70%" stop-color="#0e4b77"/>
+      <stop offset="100%" stop-color="#05192d"/>
+    </linearGradient>
+    <linearGradient id="lightRay" x1="0%" y1="0%" x2="40%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#20B8B0" stop-opacity="0.0"/>
+    </linearGradient>
+    <linearGradient id="sandGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4a3b2c"/>
+      <stop offset="30%" stop-color="#2b2016"/>
+      <stop offset="100%" stop-color="#120c08"/>
+    </linearGradient>
+    <linearGradient id="neonGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="60%" stop-color="#4facfe"/>
+      <stop offset="100%" stop-color="#ff0844"/>
+    </linearGradient>
+    <linearGradient id="bettaHero" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff007f"/>
+      <stop offset="50%" stop-color="#7928ca"/>
+      <stop offset="100%" stop-color="#20B8B0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Deep water background -->
+  <rect width="1200" height="480" fill="url(#waterDeep)" />
+
+  <!-- Sun Rays from top -->
+  <polygon points="150,0 260,0 420,440 220,440" fill="url(#lightRay)" />
+  <polygon points="500,0 680,0 850,440 600,440" fill="url(#lightRay)" />
+  <polygon points="850,0 970,0 1150,440 980,440" fill="url(#lightRay)" />
+
+  <!-- Substrate / Sand / Aquascape base -->
+  <path d="M 0 430 Q 200 410 400 425 Q 650 445 850 420 Q 1050 405 1200 430 L 1200 480 L 0 480 Z" fill="url(#sandGrad)" />
+
+  <!-- Driftwood & Rocks -->
+  <path d="M 120 440 Q 180 340 240 370 Q 260 410 320 435 Z" fill="#1e1813" />
+  <path d="M 880 435 Q 940 330 1020 360 Q 1060 415 1100 440 Z" fill="#1b1712" />
+
+  <!-- Plants Left (Tall Background tape grass) -->
+  <path d="M 30 440 Q 20 220 70 120 Q 55 240 60 440 Z" fill="#166534" opacity="0.7"/>
+  <path d="M 60 440 Q 90 200 130 90 Q 105 220 90 440 Z" fill="#22c55e" opacity="0.85"/>
+  <path d="M 90 440 Q 140 250 170 140 Q 130 260 120 440 Z" fill="#15803d" />
+  <path d="M 130 440 Q 180 300 210 200 Q 165 310 155 440 Z" fill="#4ade80" opacity="0.9"/>
+
+  <!-- Plants Right (Lush stems & Ferns) -->
+  <path d="M 1150 440 Q 1120 200 1080 80 Q 1110 210 1120 440 Z" fill="#15803d" opacity="0.8"/>
+  <path d="M 1100 440 Q 1050 220 1010 110 Q 1045 230 1070 440 Z" fill="#22c55e" opacity="0.9"/>
+  <path d="M 1030 440 Q 980 270 940 180 Q 970 280 995 440 Z" fill="#4ade80" />
+
+  <!-- Midground Anubias & Moss -->
+  <path d="M 230 420 C 210 380 240 360 270 380 C 290 365 330 385 310 420 Z" fill="#16a34a" />
+  <path d="M 900 420 C 880 375 920 355 950 375 C 970 360 1000 380 985 420 Z" fill="#22c55e" />
+
+  <!-- Bubbles rising -->
+  <circle cx="210" cy="380" r="3" fill="#ffffff" opacity="0.5"/>
+  <circle cx="215" cy="320" r="4.5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="208" cy="240" r="3.5" fill="#ffffff" opacity="0.5"/>
+  <circle cx="218" cy="160" r="5" fill="#ffffff" opacity="0.7"/>
+  <circle cx="212" cy="90" r="6" fill="#ffffff" opacity="0.8"/>
+
+  <circle cx="950" cy="360" r="3.5" fill="#ffffff" opacity="0.5"/>
+  <circle cx="958" cy="290" r="5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="948" cy="210" r="4" fill="#ffffff" opacity="0.5"/>
+  <circle cx="955" cy="130" r="5.5" fill="#ffffff" opacity="0.7"/>
+
+  <!-- Swimming Fish 1: Vibrant Betta Center Right -->
+  <g transform="translate(640, 160)">
+    <!-- Big dorsal fin -->
+    <path d="M 40 -10 C 60 -60 110 -50 140 -20 C 100 -25 70 -15 50 -5 Z" fill="url(#bettaHero)" opacity="0.9"/>
+    <!-- Flowing Caudal tail -->
+    <path d="M 0 0 C -60 -50 -100 -20 -120 20 C -90 40 -50 35 0 10 Z" fill="url(#bettaHero)" />
+    <path d="M -20 5 C -70 40 -110 80 -80 110 C -50 80 -30 40 0 10 Z" fill="url(#bettaHero)" opacity="0.85"/>
+    <!-- Ventral fins -->
+    <path d="M 45 15 C 35 45 25 70 30 75 C 38 65 48 40 52 15 Z" fill="#ff007f" />
+    <!-- Body -->
+    <ellipse cx="50" cy="5" rx="35" ry="16" fill="#7928ca" />
+    <ellipse cx="65" cy="4" rx="20" ry="12" fill="#20B8B0" />
+    <!-- Eye -->
+    <circle cx="75" cy="2" r="3.5" fill="#0B1F33" />
+    <circle cx="76.5" cy="1" r="1.2" fill="#FFFFFF" />
+  </g>
+
+  <!-- Swimming Fish 2: Angelfish Upper Left -->
+  <g transform="translate(360, 140) scale(0.85)">
+    <!-- Tall Dorsal -->
+    <path d="M 10 -15 L 35 -110 L 25 -10 Z" fill="#f8fafc" stroke="#334155" stroke-width="1.5"/>
+    <!-- Long Ventral -->
+    <path d="M 15 25 L 35 120 L 25 25 Z" fill="#f8fafc" stroke="#334155" stroke-width="1.5"/>
+    <!-- Caudal tail -->
+    <path d="M -25 5 L -85 -30 L -65 5 L -85 40 Z" fill="#e2e8f0" stroke="#334155" stroke-width="1.5"/>
+    <!-- Triangular Body -->
+    <polygon points="50,5 0,-30 -30,5 0,40" fill="#f1f5f9" stroke="#334155" stroke-width="2"/>
+    <!-- Vertical Stripes -->
+    <line x1="15" y1="-20" x2="15" y2="30" stroke="#1e293b" stroke-width="5" />
+    <line x1="-5" y1="-25" x2="-5" y2="35" stroke="#1e293b" stroke-width="6" />
+    <line x1="-22" y1="-5" x2="-22" y2="15" stroke="#1e293b" stroke-width="4" />
+    <!-- Eye -->
+    <circle cx="32" cy="0" r="4.5" fill="#ef4444" />
+    <circle cx="33" cy="0" r="2.5" fill="#0B1F33" />
+  </g>
+
+  <!-- Schooling Neon Tetras -->
+  <g transform="translate(480, 260)">
+    <!-- Tetra 1 -->
+    <ellipse cx="0" cy="0" rx="22" ry="7" fill="#0f172a" />
+    <path d="M -5 -3 L 18 -1 L 18 1 L -5 -1 Z" fill="#00f2fe" />
+    <path d="M -18 1 L 5 1 L 5 5 L -18 2 Z" fill="#ef4444" />
+    <polygon points="-22,0 -32,-7 -30,0 -32,7" fill="#cbd5e1" opacity="0.6"/>
+    <!-- Tetra 2 -->
+    <g transform="translate(35, -25)">
+      <ellipse cx="0" cy="0" rx="20" ry="6" fill="#0f172a" />
+      <path d="M -5 -3 L 16 -1 L 16 1 L -5 -1 Z" fill="#00f2fe" />
+      <path d="M -16 1 L 4 1 L 4 4 L -16 2 Z" fill="#ef4444" />
+      <polygon points="-20,0 -29,-6 -27,0 -29,6" fill="#cbd5e1" opacity="0.6"/>
+    </g>
+    <!-- Tetra 3 -->
+    <g transform="translate(60, 18)">
+      <ellipse cx="0" cy="0" rx="19" ry="6" fill="#0f172a" />
+      <path d="M -4 -3 L 15 -1 L 15 1 L -4 -1 Z" fill="#00f2fe" />
+      <path d="M -15 1 L 3 1 L 3 4 L -15 2 Z" fill="#ef4444" />
+      <polygon points="-19,0 -28,-6 -26,0 -28,6" fill="#cbd5e1" opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- Swimming Fish 4: Golden fish bottom center -->
+  <g transform="translate(760, 310) scale(0.9)">
+    <path d="M -20 0 C -50 -30 -80 -15 -70 10 C -80 35 -50 45 -20 15 Z" fill="#f97316" opacity="0.8"/>
+    <ellipse cx="0" cy="5" rx="30" ry="18" fill="#ea580c" />
+    <ellipse cx="5" cy="4" rx="26" ry="15" fill="#fba919" />
+    <circle cx="20" cy="0" r="3.5" fill="#0B1F33" />
+    <circle cx="21" cy="-1" r="1.2" fill="#FFFFFF" />
+  </g>
+</svg>

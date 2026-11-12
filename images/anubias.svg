@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="320" height="220">
+  <rect width="320" height="220" fill="#08231e" rx="10"/>
+  <!-- Rock mount -->
+  <ellipse cx="160" cy="190" rx="80" ry="22" fill="#334155"/>
+  <!-- Broad leathery leaves -->
+  <g transform="translate(160, 185)">
+    <!-- Leaf 1 -->
+    <path d="M 0 0 Q -30 -50 -70 -70 Q -40 -30 0 0 Z" fill="#14532d"/>
+    <ellipse cx="-65" cy="-70" rx="32" ry="18" fill="#15803d" transform="rotate(-30 -65 -70)"/>
+    <!-- Leaf 2 -->
+    <path d="M 0 0 Q 30 -50 70 -70 Q 40 -30 0 0 Z" fill="#14532d"/>
+    <ellipse cx="65" cy="-70" rx="32" ry="18" fill="#16a34a" transform="rotate(30 65 -70)"/>
+    <!-- Center Leaf -->
+    <path d="M 0 0 Q 0 -60 0 -90" stroke="#15803d" stroke-width="3"/>
+    <ellipse cx="0" cy="-105" rx="36" ry="22" fill="#22c55e" transform="rotate(0 0 -105)"/>
+  </g>
+</svg>

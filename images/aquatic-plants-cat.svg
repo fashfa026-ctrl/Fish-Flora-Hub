@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+  <defs>
+    <linearGradient id="catPlantBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a332a"/>
+      <stop offset="100%" stop-color="#041a15"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" fill="url(#catPlantBg)" rx="12"/>
+  <circle cx="200" cy="130" r="90" fill="#56B870" opacity="0.18" filter="blur(20px)"/>
+
+  <!-- Substrate -->
+  <path d="M 0 220 Q 200 200 400 220 L 400 250 L 0 250 Z" fill="#1c1611" />
+
+  <!-- Multiple detailed plant layers -->
+  <!-- Background tall leaves -->
+  <path d="M 80 230 Q 60 80 120 30 Q 95 100 110 230 Z" fill="#15803d" />
+  <path d="M 310 230 Q 330 70 270 20 Q 300 90 280 230 Z" fill="#15803d" />
+
+  <!-- Midground Amazon Sword style -->
+  <g transform="translate(200, 225)">
+    <path d="M 0 0 Q -70 -120 -40 -170 Q -30 -110 0 0 Z" fill="#22c55e" />
+    <path d="M 0 0 Q 70 -120 40 -170 Q 30 -110 0 0 Z" fill="#16a34a" />
+    <path d="M 0 0 Q -25 -140 0 -190 Q 25 -140 0 0 Z" fill="#4ade80" />
+    <path d="M 0 0 Q -100 -80 -80 -120 Q -50 -70 0 0 Z" fill="#15803d" />
+    <path d="M 0 0 Q 100 -80 80 -120 Q 50 -70 0 0 Z" fill="#22c55e" />
+  </g>
+
+  <!-- Foreground Anubias -->
+  <ellipse cx="140" cy="205" rx="30" ry="15" fill="#166534" transform="rotate(-20 140 205)"/>
+  <ellipse cx="260" cy="205" rx="30" ry="15" fill="#16a34a" transform="rotate(20 260 205)"/>
+
+  <!-- Bubbles on leaves (Pearling) -->
+  <circle cx="200" cy="35" r="3.5" fill="#ffffff" opacity="0.8"/>
+  <circle cx="160" cy="55" r="2.8" fill="#ffffff" opacity="0.7"/>
+  <circle cx="240" cy="55" r="2.8" fill="#ffffff" opacity="0.7"/>
+</svg>

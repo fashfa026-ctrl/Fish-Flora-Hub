@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="320" height="220">
+  <rect width="320" height="220" fill="#07221d" rx="10"/>
+  <!-- Plant base -->
+  <path d="M 120 200 Q 160 190 200 200 Z" fill="#261c14"/>
+  <!-- Upright sword leaves -->
+  <g transform="translate(160, 195)">
+    <path d="M 0 0 Q -40 -90 -20 -170 Q 0 -90 0 0 Z" fill="#16a34a"/>
+    <path d="M 0 0 Q 40 -90 20 -170 Q 0 -90 0 0 Z" fill="#22c55e"/>
+    <path d="M 0 0 Q -70 -75 -50 -135 Q -25 -70 0 0 Z" fill="#15803d"/>
+    <path d="M 0 0 Q 70 -75 50 -135 Q 25 -70 0 0 Z" fill="#16a34a"/>
+    <path d="M 0 0 Q -10 -100 0 -180 Q 10 -100 0 0 Z" fill="#4ade80"/>
+  </g>
+</svg>

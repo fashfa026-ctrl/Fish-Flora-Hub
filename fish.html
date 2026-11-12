@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        (function() {
+            try {
+                var theme = localStorage.getItem('fish_flora_theme') || 'dark';
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch(e) {}
+        })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Collection | Fish & Flora Hub</title>
+    <meta name="description" content="Explore our rich collection of healthy freshwater, tropical, and community aquarium fish.">
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6.7.2 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=2.9">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link" aria-label="Fish & Flora Hub Home">
+                <img src="images/logo.png" alt="Fish & Flora Hub Logo" class="logo-img">
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="fish.html" class="nav-link active">Fish</a></li>
+                    <li><a href="plants.html" class="nav-link">Plants</a></li>
+                    <li><a href="accessories.html" class="nav-link">Accessories</a></li>
+                    <li><a href="care-guide.html" class="nav-link">Care Guide</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button type="button" class="header-icon-btn theme-toggle-btn" title="Toggle Light/Dark Theme" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon theme-icon"></i>
+                </button>
+
+                <button type="button" class="wishlist-icon-btn" onclick="openWishlistModal()" title="My Wishlist" aria-label="My Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="wishlist-badge">0</span>
+                </button>
+
+                <a href="cart.html" class="cart-icon-btn" title="Shopping Cart" aria-label="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping" style="font-size: 1.15rem;"></i>
+                    <span class="cart-badge">0</span>
+                </a>
+
+                <button type="button" class="mobile-nav-toggle" aria-label="Open mobile menu" aria-expanded="false">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner page-banner-fish">
+        <div class="page-banner-overlay"></div>
+        <div class="container page-banner-container">
+            <h1 class="page-banner-title">Our Fish Collection</h1>
+            <p class="page-banner-subtitle">Explore a variety of beautiful and healthy aquarium fish.</p>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section class="section">
+        <div class="container">
+            <!-- Filter & Search Bar -->
+            <div class="filter-bar">
+                <div class="search-input-wrap">
+                    <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" id="catalog-search-input" class="search-input" placeholder="Search fish by name..." aria-label="Search fish">
+                </div>
+
+                <div class="filter-selects-wrap">
+                    <select id="catalog-category-select" class="filter-select" aria-label="Filter by category">
+                        <option value="all">All Categories</option>
+                        <option value="tropical">Tropical Fish</option>
+                        <option value="freshwater">Freshwater Fish</option>
+                        <option value="community">Community Fish</option>
+                        <option value="bottom">Bottom Dwellers</option>
+                    </select>
+
+                    <select id="catalog-secondary-select" class="filter-select" aria-label="Filter by temperament">
+                        <option value="all">All Temperaments</option>
+                        <option value="peaceful">Peaceful</option>
+                        <option value="active">Active</option>
+                        <option value="community">Community Cichlid</option>
+                        <option value="semi-aggressive">Semi-Aggressive</option>
+                    </select>
+
+                    <select id="catalog-sort-select" class="filter-select" aria-label="Sort products">
+                        <option value="default">Sort by: Default</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name-az">Name: A to Z</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Layout: Sidebar + Product Grid -->
+            <div class="catalog-layout">
+                <!-- Sidebar Categories -->
+                <aside class="catalog-sidebar">
+                    <h3 class="sidebar-title">Fish Categories</h3>
+                    <div class="sidebar-cat-list">
+                        <button type="button" class="sidebar-cat-btn active" data-category="all">
+                            <span>All Fish</span>
+                            <span class="sidebar-count">8</span>
+                        </button>
+                        <button type="button" class="sidebar-cat-btn" data-category="tropical">
+                            <span>Tropical Fish</span>
+                            <span class="sidebar-count">2</span>
+                        </button>
+                        <button type="button" class="sidebar-cat-btn" data-category="freshwater">
+                            <span>Freshwater Fish</span>
+                            <span class="sidebar-count">3</span>
+                        </button>
+                        <button type="button" class="sidebar-cat-btn" data-category="community">
+                            <span>Community Fish</span>
+                            <span class="sidebar-count">2</span>
+                        </button>
+                        <button type="button" class="sidebar-cat-btn" data-category="bottom">
+                            <span>Bottom Dwellers</span>
+                            <span class="sidebar-count">1</span>
+                        </button>
+                    </div>
+                </aside>
+
+                <!-- Main Products Area -->
+                <main>
+                    <div id="catalog-grid" class="products-grid" data-page-type="fish">
+                        <!-- Rendered dynamically by script.js?v=2.9 -->
+                    </div>
+
+                    <!-- Pagination -->
+                    <div id="catalog-pagination" class="pagination">
+                        <!-- Populated by script.js?v=2.9 -->
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="images/logo.png" alt="Fish & Flora Hub Logo" class="footer-logo">
+                    <p>
+                        Your trusted portal for aquarium fish, healthy aquatic plants, and reliable accessories. Helping hobbyists create thriving underwater habitats.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="fish.html">Fish</a></li>
+                        <li><a href="plants.html">Plants</a></li>
+                        <li><a href="accessories.html">Accessories</a></li>
+                        <li><a href="care-guide.html">Care Guide</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fa-solid fa-location-dot"></i> 123 Golden Street, Colombo, Sri Lanka</li>
+                        <li><i class="fa-solid fa-phone"></i> +94 77 6292 797</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@fishflorahub.com</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Follow Us</h4>
+                    <div class="footer-social-links mb-3">
+                        <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://wa.me/94776292797" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <p style="font-size: 0.8rem; color: #64748b;">
+                        Educational 2nd Semester Project Demo.
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2025 Fish &amp; Flora Hub. All rights reserved.</div>
+                <div>Designed with HTML5, CSS3 &amp; JavaScript</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/script.js?v=2.9"></script>
+</body>
+</html>

@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        (function() {
+            try {
+                var theme = localStorage.getItem('fish_flora_theme') || 'dark';
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch(e) {}
+        })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish & Flora Hub | Premium Aquarium Fish, Plants & Accessories</title>
+    <meta name="description" content="Discover vibrant aquarium fish, natural aquatic plants, and quality aquarium accessories at Fish & Flora Hub.">
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6.7.2 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=2.9">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link" aria-label="Fish & Flora Hub Home">
+                <img src="images/logo.png" alt="Fish & Flora Hub Logo" class="logo-img">
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="fish.html" class="nav-link">Fish</a></li>
+                    <li><a href="plants.html" class="nav-link">Plants</a></li>
+                    <li><a href="accessories.html" class="nav-link">Accessories</a></li>
+                    <li><a href="care-guide.html" class="nav-link">Care Guide</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button type="button" class="header-icon-btn theme-toggle-btn" title="Toggle Light/Dark Theme" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon theme-icon"></i>
+                </button>
+
+                <button type="button" class="wishlist-icon-btn" onclick="openWishlistModal()" title="My Wishlist" aria-label="My Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="wishlist-badge">0</span>
+                </button>
+
+                <a href="cart.html" class="cart-icon-btn" title="Shopping Cart" aria-label="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping" style="font-size: 1.15rem;"></i>
+                    <span class="cart-badge">0</span>
+                </a>
+
+                <button type="button" class="mobile-nav-toggle" aria-label="Open mobile menu" aria-expanded="false">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section: Multi-Slide Interactive Carousel -->
+    <section class="hero-section" id="hero-slider">
+        <!-- Hero Slides Track -->
+        <div class="hero-slider-track">
+            <!-- Slide 1: Original Aquatic Beauty -->
+            <div class="hero-slide active" style="background-image: url('images/hero-aquarium-original1.jpg');">
+                <div class="hero-overlay"></div>
+                <div class="container hero-container">
+                    <div class="hero-content">
+                        <span class="hero-badge"><!--🐠--> Welcome to Fish &amp; Flora Hub</span>
+                        <h1 class="hero-title">Dive into a World of<br><span>Aquatic Beauty</span></h1>
+                        <p class="hero-desc">
+                            Discover beautiful aquarium fish, vibrant aquatic plants and everything you need to create your dream aquarium.
+                        </p>
+                        <div class="hero-btn-group">
+                            <a href="fish.html" class="btn btn-hero-primary">Explore Fish</a>
+                            <a href="#categories" class="btn btn-hero-glass">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Bring Nature Home (Betta Fish Aquascape) -->
+            <div class="hero-slide" style="background-image: url('images/hero-slide-2.png');">
+                <div class="hero-overlay hero-overlay-slide2"></div>
+                <div class="container hero-container">
+                    <div class="hero-content">
+                        <span class="hero-overline-tag">HEALTHY FISH • FRESH PLANTS • HAPPY AQUARIUMS</span>
+                        <h1 class="hero-title">Bring Nature<br><span>Home</span><!-- 🌿--></h1>
+                        <p class="hero-desc">
+                            Explore a wide range of aquarium fish, live plants and premium accessories for your aquatic world.
+                        </p>
+                        <div class="hero-btn-group">
+                            <a href="#categories" class="btn btn-hero-primary">Shop Now &rarr;</a>
+                            <a href="care-guide.html" class="btn btn-hero-glass">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Beautiful Fish, Healthy Ecosystems (Neon Tetras Aquascape) -->
+            <div class="hero-slide" style="background-image: url('images/hero-slide-3.png');">
+                <div class="hero-overlay hero-overlay-slide3"></div>
+                <div class="container hero-container">
+                    <div class="hero-content">
+                        <span class="hero-badge"><!--🌿--> Premium Aquarium Collection</span>
+                        <h1 class="hero-title">Beautiful Fish<br><span>Healthy Ecosystems</span></h1>
+                        <p class="hero-desc">
+                            Choose from a variety of freshwater fish, live plants and top-quality accessories for a thriving aquarium.
+                        </p>
+                        <div class="hero-features-row">
+                            <div class="hero-feature-item">
+                                <i class="fa-solid fa-shield-heart"></i>
+                                <span>Healthy Fish</span>
+                            </div>
+                            <div class="hero-feature-item">
+                                <i class="fa-solid fa-seedling"></i>
+                                <span>Fresh Plants</span>
+                            </div>
+                            <div class="hero-feature-item">
+                                <i class="fa-solid fa-truck-fast"></i>
+                                <span>Fast Delivery</span>
+                            </div>
+                        </div>
+                        <div class="hero-btn-group">
+                            <a href="fish.html" class="btn btn-hero-primary">View Collection &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Navigation Arrows -->
+        <button type="button" class="hero-arrow hero-arrow-left" aria-label="Previous Slide">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button type="button" class="hero-arrow hero-arrow-right" aria-label="Next Slide">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <!-- Carousel Dots Indicator -->
+        <div class="hero-dots">
+            <button type="button" class="hero-dot active" data-slide="0" aria-label="Go to Slide 1"></button>
+            <button type="button" class="hero-dot" data-slide="1" aria-label="Go to Slide 2"></button>
+            <button type="button" class="hero-dot" data-slide="2" aria-label="Go to Slide 3"></button>
+        </div>
+    </section>
+
+    <!-- Shop by Category (5 Categories Grid) -->
+    <section class="section" id="categories">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Shop by Category</h2>
+                <p class="section-subtitle">Everything you need for a thriving, vibrant aquatic ecosystem</p>
+            </div>
+
+            <div class="shop-categories-grid">
+                <!-- 1. Aquarium Fish -->
+                <a href="fish.html" class="shop-cat-card">
+                    <div class="shop-cat-img-wrap">
+                        <img src="images/tropical-fish-cat.jpeg" alt="Aquarium Fish" class="shop-cat-img" onerror="this.src='images/logo.png'">
+                    </div>
+                    <div class="shop-cat-body">
+                        <h3 class="shop-cat-title">Aquarium Fish</h3>
+                        <p class="shop-cat-subtitle">Bettas, Guppies, Tetras &amp; More</p>
+                    </div>
+                </a>
+
+                <!-- 2. Aquatic Plants -->
+                <a href="plants.html" class="shop-cat-card">
+                    <div class="shop-cat-img-wrap">
+                        <img src="images/aquatic-plants-cat.jpeg" alt="Aquatic Plants" class="shop-cat-img" onerror="this.src='images/logo.png'">
+                    </div>
+                    <div class="shop-cat-body">
+                        <h3 class="shop-cat-title">Aquatic Plants</h3>
+                        <p class="shop-cat-subtitle">Foreground, Moss &amp; Stem Flora</p>
+                    </div>
+                </a>
+
+                <!-- 3. Fish Tanks 
+                <a href="accessories.html?cat=tanks" class="shop-cat-card">
+                    <div class="shop-cat-img-wrap">
+                        <img src="images/rimless-tank-front.png" alt="Fish Tanks" class="shop-cat-img" onerror="this.src='images/accessories-cat.jpeg'">
+                    </div>
+                    <div class="shop-cat-body">
+                        <h3 class="shop-cat-title">Fish Tanks</h3>
+                        <p class="shop-cat-subtitle">Rimless 10L to 60L Aquariums</p>
+                    </div>
+                </a>
+
+                 4. Fish Food 
+                <a href="accessories.html?cat=food" class="shop-cat-card">
+                    <div class="shop-cat-img-wrap">
+                        <img src="images/tropical-pellets.png" alt="Fish Food" class="shop-cat-img" onerror="this.src='images/accessories-cat.jpeg'">
+                    </div>
+                    <div class="shop-cat-body">
+                        <h3 class="shop-cat-title">Fish Food</h3>
+                        <p class="shop-cat-subtitle">Pellets, Flakes &amp; Nutrition</p>
+                    </div>
+                </a-->
+
+                <!-- 5. Accessories & Equipment -->
+                <a href="accessories.html?cat=filters" class="shop-cat-card">
+                    <div class="shop-cat-img-wrap">
+                        <img src="images/accessories-cat.jpeg" alt="Accessories &amp; Equipment" class="shop-cat-img" onerror="this.src='images/logo.png'">
+                    </div>
+                    <div class="shop-cat-body">
+                        <h3 class="shop-cat-title">Accessories</h3>
+                        <p class="shop-cat-subtitle">Filters, Lights, Heaters &amp; Decor</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="section" id="featured-products" style="background-color: var(--bg-surface-alt);">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px; flex-wrap: wrap; gap: 16px;">
+                <div>
+                    <h2 class="section-title" style="margin-bottom: 4px;">Featured Products</h2>
+                    <p class="section-subtitle" style="margin-bottom: 0;">Popular choices for beginner and experienced aquarium keepers</p>
+                </div>
+                <a href="fish.html" style="font-weight: 600; color: var(--color-turquoise); display: inline-flex; align-items: center; gap: 4px;">
+                    View All Products &rarr;
+                </a>
+            </div>
+
+            <div class="products-grid">
+                <!-- Featured 1: Betta Fish -->
+                <div class="product-card">
+                    <div class="product-card-img-wrap">
+                        <img src="images/betta-fish.jpeg" alt="Betta Fish" class="product-card-img">
+                        <span class="product-badge">Tropical Fish</span>
+                    </div>
+                    <div class="product-card-body">
+                        <h3 class="product-title">Betta Fish</h3>
+                        <p class="product-desc">Colourful freshwater fish known for its majestic flowing fins.</p>
+                        <div class="product-price-row">
+                            <span class="product-price">Rs. 500</span>
+                        </div>
+                        <div class="product-btn-group">
+                            <button class="btn btn-primary btn-sm" onclick="addToCart('fish-1')">Add to Cart</button>
+                            <button class="btn btn-secondary-outline btn-sm" onclick="openProductQuickView('fish-1')">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured 2: Guppy Fish -->
+                <div class="product-card">
+                    <div class="product-card-img-wrap">
+                        <img src="images/guppy-fish.jpeg" alt="Guppy Fish" class="product-card-img">
+                        <span class="product-badge">Freshwater Fish</span>
+                    </div>
+                    <div class="product-card-body">
+                        <h3 class="product-title">Guppy Fish</h3>
+                        <p class="product-desc">Peaceful, energetic, and active livebearer with rainbow colors.</p>
+                        <div class="product-price-row">
+                            <span class="product-price">Rs. 300</span>
+                        </div>
+                        <div class="product-btn-group">
+                            <button class="btn btn-primary btn-sm" onclick="addToCart('fish-2')">Add to Cart</button>
+                            <button class="btn btn-secondary-outline btn-sm" onclick="openProductQuickView('fish-2')">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured 3: Java Fern -->
+                <div class="product-card">
+                    <div class="product-card-img-wrap">
+                        <img src="images/java-fern.jpg" alt="Java Fern" class="product-card-img">
+                        <span class="product-badge">Aquatic Plant</span>
+                    </div>
+                    <div class="product-card-body">
+                        <h3 class="product-title">Java Fern</h3>
+                        <p class="product-desc">Extremely hardy freshwater plant that anchors to driftwood and rock.</p>
+                        <div class="product-price-row">
+                            <span class="product-price">Rs. 800</span>
+                        </div>
+                        <div class="product-btn-group">
+                            <button class="btn btn-primary btn-sm" onclick="addToCart('plant-1')">Add to Cart</button>
+                            <button class="btn btn-secondary-outline btn-sm" onclick="openProductQuickView('plant-1')">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured 4: Aquarium Filter -->
+                <div class="product-card">
+                    <div class="product-card-img-wrap">
+                        <img src="images/aquarium-filter.jpeg" alt="Aquarium Filter" class="product-card-img">
+                        <span class="product-badge">Equipment</span>
+                    </div>
+                    <div class="product-card-body">
+                        <h3 class="product-title">Aquarium Filter</h3>
+                        <p class="product-desc">Quiet multi-stage canister filter providing clean crystal water.</p>
+                        <div class="product-price-row">
+                            <span class="product-price">Rs. 2,500</span>
+                        </div>
+                        <div class="product-btn-group">
+                            <button class="btn btn-primary btn-sm" onclick="addToCart('acc-2')">Add to Cart</button>
+                            <button class="btn btn-secondary-outline btn-sm" onclick="openProductQuickView('acc-2')">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Sellers & New Arrivals Dynamic Showcase -->
+    <section class="section" id="showcase-section">
+        <div class="container">
+            <div class="text-center mb-4">
+                <div class="title-with-lines">
+                    <span class="title-glow-line"></span>
+                    <h2 class="section-title">Trending in Store</h2>
+                    <span class="title-glow-line"></span>
+                </div>
+                <p class="section-subtitle">Top customer favorites &amp; fresh arrivals</p>
+                <div class="home-showcase-tabs-nav">
+                    <button type="button" class="showcase-tab-btn active" data-tab="tab-bestsellers">
+                        <i class="fa-solid fa-fire"></i> Best Sellers
+                    </button>
+                    <button type="button" class="showcase-tab-btn" data-tab="tab-newarrivals">
+                        <i class="fa-solid fa-sparkles"></i> New Arrivals
+                    </button>
+                </div>
+            </div>
+
+            <div id="tab-bestsellers" class="showcase-tab-panel active">
+                <div class="products-grid" id="bestsellers-grid">
+                    <!-- Populated dynamically by initHomePageShowcase() -->
+                </div>
+            </div>
+
+            <div id="tab-newarrivals" class="showcase-tab-panel">
+                <div class="products-grid" id="newarrivals-grid">
+                    <!-- Populated dynamically by initHomePageShowcase() -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section why-choose-us-section" id="why-us">
+        <!-- Ambient corner accents matching target design -->
+        <div class="ambient-corner-decor ambient-fish-top-left" aria-hidden="true">
+            <img src="images/floating-fish.png" alt="" class="ambient-swim-fish">
+        </div>
+        <div class="ambient-corner-decor ambient-bubbles-top-right" aria-hidden="true">
+            <img src="images/floating-bubbles.png" alt="" class="ambient-rise-bubbles">
+        </div>
+
+        <div class="container">
+            <div class="text-center why-us-header-wrap">
+                <div class="why-us-badge-row">
+                    <span class="why-us-header-line"></span>
+                    <span class="why-us-overline">WHY CHOOSE US?</span>
+                    <span class="why-us-header-line"></span>
+                </div>
+                <h2 class="why-us-main-title">Your Trusted Aquarium <span class="highlight-cyan">Partner</span></h2>
+                <p class="why-us-subtitle">We are committed to bringing the best aquatic experience to your home.</p>
+            </div>
+
+            <div class="why-us-layout">
+                <!-- Left: Attractive Floating Aquarium Tank Showcase -->
+                <div class="why-us-image-container">
+                    <div class="why-us-backdrop-shape" aria-hidden="true"></div>
+                    <div class="why-us-image-card">
+                        <img src="images/choose-us.jpeg" alt="Healthy and Vibrant Aquascaped Aquarium" class="why-us-img" onerror="this.src='images/logo.png'">
+                        <div class="why-us-fish-badge" title="Aquatic Life Guarantee" aria-hidden="true">
+                            <i class="fa-solid fa-fish"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: 4 Modern Benefit Cards -->
+                <div class="why-us-cards-grid">
+                    <!-- Card 1: Premium Quality Products -->
+                    <div class="why-card">
+                        <div class="why-card-icon-wrap icon-theme-blue">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3 class="why-card-title">Premium Quality Products</h3>
+                        <p class="why-card-desc">Healthy and vibrant aquatic life, always.</p>
+                        <span class="why-card-accent-line"></span>
+                    </div>
+
+                    <!-- Card 2: Beginner-Friendly -->
+                    <div class="why-card">
+                        <div class="why-card-icon-wrap icon-theme-cyan">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <h3 class="why-card-title">Beginner-Friendly</h3>
+                        <p class="why-card-desc">Easy care tips and guidance for all hobbyists.</p>
+                        <span class="why-card-accent-line"></span>
+                    </div>
+
+                    <!-- Card 3: Expert Support -->
+                    <div class="why-card">
+                        <div class="why-card-icon-wrap icon-theme-blue">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h3 class="why-card-title">Expert Support</h3>
+                        <p class="why-card-desc">Get professional advice whenever you need it.</p>
+                        <span class="why-card-accent-line"></span>
+                    </div>
+
+                    <!-- Card 4: Reliable Service -->
+                    <div class="why-card">
+                        <div class="why-card-icon-wrap icon-theme-cyan">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <h3 class="why-card-title">Reliable Service</h3>
+                        <p class="why-card-desc">Safe and timely delivery across the country.</p>
+                        <span class="why-card-accent-line"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom CTA Button -->
+            <div class="why-us-cta-wrap">
+                <a href="fish.html" class="btn btn-why-us-cta">
+                    Explore Our Products &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="section customer-reviews-section" id="reviews">
+        <div class="container">
+            <div class="text-center section-header-wrap">
+                <div class="title-with-lines">
+                    <span class="title-glow-line"></span>
+                    <h2 class="section-title">What Our Customers Say</h2>
+                    <span class="title-glow-line"></span>
+                </div>
+                <p class="section-subtitle">Real experiences from passionate aquarium hobbyists</p>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"Ordered 4 Koi Guppies and some Java Moss. Packed safely with oxygen bag, arrived super active and healthy. The varieties feature made it so easy to pick!"</p>
+                    <div class="reviewer-meta">
+                        <div class="reviewer-avatar">RK</div>
+                        <div>
+                            <h4 class="reviewer-name">Rahul K.</h4>
+                            <span class="reviewer-tag"><i class="fa-solid fa-circle-check"></i> Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"The Rimless 40L Tank is crystal clear low-iron glass, perfectly polished edges. Best price in town and fast delivery to Kandy. Highly recommended!"</p>
+                    <div class="reviewer-meta">
+                        <div class="reviewer-avatar">SP</div>
+                        <div>
+                            <h4 class="reviewer-name">Shalini P.</h4>
+                            <span class="reviewer-tag"><i class="fa-solid fa-circle-check"></i> Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"The Halfmoon Betta was even more stunning than in pictures. His fins are vibrant blue and red. Customer care tips in the care guide helped me set up my tank."</p>
+                    <div class="reviewer-meta">
+                        <div class="reviewer-avatar">DN</div>
+                        <div>
+                            <h4 class="reviewer-name">Dinusha N.</h4>
+                            <span class="reviewer-tag"><i class="fa-solid fa-circle-check"></i> Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"Super clean web interface, smooth wishlist and quick view. The canister filter runs silent and kept my planted aquarium water crystal clean in 24 hours."</p>
+                    <div class="reviewer-meta">
+                        <div class="reviewer-avatar">AM</div>
+                        <div>
+                            <h4 class="reviewer-name">Aslam M.</h4>
+                            <span class="reviewer-tag"><i class="fa-solid fa-circle-check"></i> Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Care Banner Section -->
+    <section class="container mb-4">
+        <div class="care-cta-banner">
+            <div class="care-banner-art-wrap">
+                <img src="images/care-guppy-art.png" alt="Guppy Fish and Plants" class="care-banner-art">
+            </div>
+            <div class="care-cta-content">
+                <div class="care-title-row">
+                    <span class="care-accent-bar"></span>
+                    <h3 class="care-cta-title">New to aquarium keeping?</h3>
+                </div>
+                <p class="care-cta-text">Learn how to maintain a healthy aquatic environment, cycle your tank, and avoid common beginner mistakes.</p>
+            </div>
+            <div class="care-cta-action">
+                <a href="care-guide.html" class="btn btn-care-guide">Read Care Guide &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="images/logo.png" alt="Fish & Flora Hub Logo" class="footer-logo">
+                    <p>
+                        Your trusted portal for aquarium fish, healthy aquatic plants, and reliable accessories. Helping hobbyists create thriving underwater habitats.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="fish.html">Fish</a></li>
+                        <li><a href="plants.html">Plants</a></li>
+                        <li><a href="accessories.html">Accessories</a></li>
+                        <li><a href="care-guide.html">Care Guide</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fa-solid fa-location-dot"></i> 123 Golden Street, Colombo, Sri Lanka</li>
+                        <li><i class="fa-solid fa-phone"></i> +94 77 6292 797</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@fishflorahub.com</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Follow Us</h4>
+                    <div class="footer-social-links mb-3">
+                        <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://wa.me/94776292797" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <p style="font-size: 0.8rem; color: #64748b;">
+                        Educational 2nd Semester Project Demo.
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2025 Fish &amp; Flora Hub. All rights reserved.</div>
+                <div>Designed with HTML5, CSS3 &amp; JavaScript</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shared Scripts -->
+    <script src="js/products.js?v=2.1"></script>
+    <script src="js/cart.js?v=2.1"></script>
+    <script src="js/script.js?v=2.9"></script>
+</body>
+</html>

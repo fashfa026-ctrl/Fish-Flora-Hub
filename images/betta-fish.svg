@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="320" height="220">
+  <defs>
+    <linearGradient id="bgAqua" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f2b48"/>
+      <stop offset="100%" stop-color="#08182b"/>
+    </linearGradient>
+    <linearGradient id="finRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff0055"/>
+      <stop offset="60%" stop-color="#c026d3"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="220" fill="url(#bgAqua)" rx="10"/>
+  <!-- Bubbles -->
+  <circle cx="70" cy="50" r="3" fill="#ffffff" opacity="0.4"/>
+  <circle cx="85" cy="30" r="4.5" fill="#ffffff" opacity="0.5"/>
+
+  <!-- Betta Fish -->
+  <g transform="translate(170, 110)">
+    <!-- Dorsal Fin -->
+    <path d="M -10 -20 C 10 -90 90 -80 120 -40 C 70 -50 20 -35 0 -15 Z" fill="url(#finRed)" opacity="0.9"/>
+    <!-- Grand Caudal Tail -->
+    <path d="M -50 0 C -120 -80 -170 -30 -160 40 C -120 70 -70 50 -30 10 Z" fill="url(#finRed)"/>
+    <path d="M -40 5 C -100 50 -140 100 -90 125 C -50 95 -20 50 -10 15 Z" fill="url(#finRed)" opacity="0.85"/>
+    <!-- Ventral Fins -->
+    <path d="M 15 15 C 5 55 -5 85 0 90 C 10 80 20 50 25 20 Z" fill="#ff0055"/>
+    <!-- Body -->
+    <ellipse cx="10" cy="0" rx="45" ry="20" fill="#2563eb"/>
+    <ellipse cx="28" cy="-2" rx="28" ry="16" fill="#0284c7"/>
+    <!-- Scales texture lines -->
+    <path d="M 0 -10 Q 5 0 0 10 M 12 -12 Q 17 0 12 12 M 24 -10 Q 29 0 24 10" stroke="#38bdf8" stroke-width="1.2" fill="none" opacity="0.6"/>
+    <!-- Eye -->
+    <circle cx="42" cy="-4" r="4.5" fill="#070e17"/>
+    <circle cx="44" cy="-5.5" r="1.5" fill="#ffffff"/>
+  </g>
+</svg>

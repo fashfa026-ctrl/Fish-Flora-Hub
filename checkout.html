@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        (function() {
+            try {
+                var theme = localStorage.getItem('fish_flora_theme') || 'dark';
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch(e) {}
+        })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Fish & Flora Hub</title>
+    <meta name="description" content="Complete your Fish & Flora Hub demo order with our interactive checkout form.">
+    <!-- Font Awesome 6.7.2 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=2.9">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link" aria-label="Fish & Flora Hub Home">
+                <img src="images/logo.png" alt="Fish & Flora Hub Logo" class="logo-img">
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="fish.html" class="nav-link">Fish</a></li>
+                    <li><a href="plants.html" class="nav-link">Plants</a></li>
+                    <li><a href="accessories.html" class="nav-link">Accessories</a></li>
+                    <li><a href="care-guide.html" class="nav-link">Care Guide</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button type="button" class="header-icon-btn theme-toggle-btn" title="Toggle Light/Dark Theme" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon theme-icon"></i>
+                </button>
+
+                <button type="button" class="wishlist-icon-btn" onclick="openWishlistModal()" title="My Wishlist" aria-label="My Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="wishlist-badge">0</span>
+                </button>
+
+                <a href="cart.html" class="cart-icon-btn" title="Shopping Cart" aria-label="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping" style="font-size: 1.15rem;"></i>
+                    <span class="cart-badge">0</span>
+                </a>
+
+                <button type="button" class="mobile-nav-toggle" aria-label="Open mobile menu" aria-expanded="false">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner page-banner-checkout">
+        <div class="page-banner-overlay"></div>
+        <div class="container page-banner-container">
+            <h1 class="page-banner-title">Checkout</h1>
+            <p class="page-banner-subtitle">Fill in your details to complete your demo order.</p>
+        </div>
+    </section>
+
+    <!-- Checkout Section -->
+    <section class="section">
+        <div class="container">
+            <div id="checkout-empty-notice" class="alert alert-danger mb-4" style="display: none;">
+                ⚠️ Your cart is currently empty! Please <a href="fish.html" style="text-decoration: underline; font-weight: 700;">browse products</a> and add items before checking out.
+            </div>
+
+            <div class="checkout-layout">
+                <!-- Customer Details Form -->
+                <div class="checkout-card" id="customer-form-card">
+                    <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 20px;">Customer Information</h2>
+
+                    <form id="checkout-form" novalidate>
+                        <div class="form-group">
+                            <label for="fullname" class="form-label">Full Name *</label>
+                            <input type="text" id="fullname" class="form-input" placeholder="e.g. Hayas Mohamed" required>
+                            <span class="field-error" id="fullname-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" class="form-input" placeholder="e.g. ashfa@example.com" required>
+                            <span class="field-error" id="email-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number *</label>
+                            <input type="tel" id="phone" class="form-input" placeholder="e.g. 077 629 2797 or +94 77 6292 797" required>
+                            <span class="field-error" id="phone-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address" class="form-label">Delivery Address *</label>
+                            <textarea id="address" class="form-textarea" rows="3" placeholder="Enter door number, street, city and postal code" required></textarea>
+                            <span class="field-error" id="address-error"></span>
+                        </div>
+
+                        <div class="form-group" style="margin-top: 24px;">
+                            <label class="form-label">Payment Method</label>
+                            <div style="background-color: var(--bg-surface-alt); padding: 14px 16px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); display: flex; align-items: center; gap: 12px;">
+                                <input type="radio" id="pay-cod" name="payment_method" value="cod" checked>
+                                <label for="pay-cod" style="cursor: pointer; margin-bottom: 0;">
+                                    <strong>Cash on Delivery (Demo Only)</strong>
+                                    <span style="display: block; font-size: 0.8rem; color: var(--text-muted);">
+                                        Demo order only (no real payment or card required).
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-size: 0.9rem;">
+                                <input type="checkbox" id="terms-agreement" style="margin-top: 4px;">
+                                <span>I agree to the terms and understand this is an educational demo order.</span>
+                            </label>
+                            <span class="field-error" id="terms-error"></span>
+                        </div>
+
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 30px; gap: 16px; flex-wrap: wrap;">
+                            <a href="cart.html" class="btn btn-secondary-outline">&larr; Back to Cart</a>
+                            <button type="submit" id="place-order-btn" class="btn btn-primary">
+                                Place Demo Order 🚀
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Right Column: Security Badge & Order Summary -->
+                <div>
+                    <!-- Trust Badge Card -->
+                    <div class="trust-badge-card">
+                        <div class="trust-icon">🛡️</div>
+                        <h4 style="margin-bottom: 6px;">Your order is safe and secure!</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;">
+                            This educational demo simulates a clean, professional e-commerce checkout.
+                        </p>
+                        <div style="display: flex; justify-content: center; gap: 16px; font-size: 0.8rem; color: var(--color-green); font-weight: 600;">
+                            <span>✓ Secure Validation</span>
+                            <span>✓ Data Protected</span>
+                            <span>✓ Demo Order Only</span>
+                        </div>
+                    </div>
+
+                    <!-- Order Summary Card -->
+                    <div class="checkout-card">
+                        <h3 class="section-title" style="font-size: 1.25rem; margin-bottom: 16px;">Order Summary</h3>
+                        
+                        <div id="checkout-items-list">
+                            <!-- Populated dynamically by checkout.js -->
+                        </div>
+
+                        <div style="display: flex; justify-content: space-between; margin-top: 20px; padding-top: 16px; border-top: 2px dashed var(--border-color); font-size: 1.2rem; font-weight: 700;">
+                            <span>Total Amount</span>
+                            <span id="checkout-total-price" style="color: var(--color-turquoise);">Rs. 0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Success Modal -->
+    <div id="order-success-modal" class="modal-backdrop" aria-hidden="true">
+        <div class="modal-dialog text-center" style="max-width: 500px;">
+            <div style="width: 70px; height: 70px; background-color: rgba(86, 184, 112, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.4rem; color: var(--color-green); margin: 0 auto 16px;">
+                ✓
+            </div>
+            
+            <h2 style="font-size: 1.6rem; margin-bottom: 8px;">Demo Order Placed!</h2>
+            <p class="text-muted mb-3">Thank you for exploring <strong>Fish &amp; Flora Hub</strong>.</p>
+
+            <div style="background-color: var(--bg-surface-alt); border-radius: var(--radius-sm); padding: 16px; text-align: left; font-size: 0.9rem; margin-bottom: 20px;">
+                <p><strong>Order ID:</strong> <span id="modal-order-id" style="color: var(--color-turquoise); font-weight: 700;">#FFH-000000</span></p>
+                <p><strong>Customer:</strong> <span id="modal-customer-name">Ashfa</span></p>
+                <p><strong>Email:</strong> <span id="modal-customer-email">ashfa@example.com</span></p>
+                <p><strong>Delivery To:</strong> <span id="modal-customer-address">Colombo, Sri Lanka</span></p>
+                <p><strong>Total Amount:</strong> <span id="modal-order-total" class="modal-total-price">Rs. 0</span></p>
+            </div>
+
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 24px;">
+                🎓 Academic Project Notice: Since this project does not use a backend database, this simulated order has been saved into your browser's local demo history.
+            </p>
+
+            <button type="button" class="btn btn-primary btn-block" onclick="closeOrderModal()">
+                Continue Shopping &rarr;
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="images/logo.png" alt="Fish & Flora Hub Logo" class="footer-logo">
+                    <p>
+                        Your trusted portal for aquarium fish, healthy aquatic plants, and reliable accessories. Helping hobbyists create thriving underwater habitats.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="fish.html">Fish</a></li>
+                        <li><a href="plants.html">Plants</a></li>
+                        <li><a href="accessories.html">Accessories</a></li>
+                        <li><a href="care-guide.html">Care Guide</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fa-solid fa-location-dot"></i> 123 Golden Street, Colombo, Sri Lanka</li>
+                        <li><i class="fa-solid fa-phone"></i> +94 77 6292 797</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@fishflorahub.com</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Follow Us</h4>
+                    <div class="footer-social-links mb-3">
+                        <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://wa.me/94776292797" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <p style="font-size: 0.8rem; color: #64748b;">
+                        Educational 2nd Semester Project Demo.
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2025 Fish &amp; Flora Hub. All rights reserved.</div>
+                <div>Designed with HTML5, CSS3 &amp; JavaScript</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+    <script src="js/script.js?v=2.9"></script>
+</body>
+</html>

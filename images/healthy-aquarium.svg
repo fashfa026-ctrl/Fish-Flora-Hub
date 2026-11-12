@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <defs>
+    <linearGradient id="lushBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#022c22"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#lushBg)" rx="10"/>
+  <!-- Substrate -->
+  <path d="M 0 210 Q 200 190 400 210 L 400 240 L 0 240 Z" fill="#1c1917"/>
+  <!-- Vibrant Aquascape Plants -->
+  <path d="M 40 215 Q 10 90 70 40 Q 50 110 65 215 Z" fill="#10b981"/>
+  <path d="M 90 215 Q 120 100 150 50 Q 110 120 115 215 Z" fill="#34d399"/>
+  <path d="M 330 215 Q 370 80 320 35 Q 345 110 310 215 Z" fill="#10b981"/>
+  <path d="M 270 215 Q 240 100 220 60 Q 255 120 250 215 Z" fill="#34d399"/>
+  <!-- School of happy fish -->
+  <g transform="translate(190, 110)">
+    <ellipse cx="0" cy="0" rx="18" ry="6" fill="#fbbf24"/>
+    <polygon points="-18,0 -26,-5 -26,5" fill="#f59e0b"/>
+    <circle cx="12" cy="-1" r="2" fill="#0f172a"/>
+  </g>
+  <g transform="translate(230, 95)">
+    <ellipse cx="0" cy="0" rx="16" ry="5" fill="#f43f5e"/>
+    <polygon points="-16,0 -23,-4 -23,4" fill="#e11d48"/>
+    <circle cx="10" cy="-1" r="1.8" fill="#0f172a"/>
+  </g>
+  <g transform="translate(150, 130)">
+    <ellipse cx="0" cy="0" rx="15" ry="5" fill="#38bdf8"/>
+    <polygon points="-15,0 -22,-4 -22,4" fill="#0284c7"/>
+    <circle cx="9" cy="-1" r="1.8" fill="#0f172a"/>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="320" height="220">
+  <defs>
+    <linearGradient id="bgAqua7" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0c2c48"/>
+      <stop offset="100%" stop-color="#051524"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="220" fill="url(#bgAqua7)" rx="10"/>
+  <!-- Zebra Danio -->
+  <g transform="translate(160, 115) scale(1.2)">
+    <!-- Tail -->
+    <polygon points="-45,0 -70,-15 -62,0 -70,15" fill="#cbd5e1" opacity="0.8"/>
+    <!-- Slender Torpedo Body -->
+    <ellipse cx="0" cy="0" rx="46" ry="13" fill="#e2e8f0"/>
+    <!-- Horizontal Blue Stripes -->
+    <path d="M -42 -5 L 36 -5" stroke="#1e3a8a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M -44 -1 L 38 -1" stroke="#1e3a8a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M -42 3 L 36 3" stroke="#1e3a8a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M -38 7 L 25 7" stroke="#1e3a8a" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Eye -->
+    <circle cx="34" cy="-2" r="3.5" fill="#0f172a"/>
+    <circle cx="35" cy="-3" r="1.2" fill="#ffffff"/>
+  </g>
+</svg>

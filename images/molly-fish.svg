@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="320" height="220">
+  <defs>
+    <linearGradient id="bgAqua6" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a2a44"/>
+      <stop offset="100%" stop-color="#051523"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="220" fill="url(#bgAqua6)" rx="10"/>
+  <!-- Black Molly -->
+  <g transform="translate(160, 115)">
+    <!-- Sailfin Dorsal -->
+    <path d="M -30 -15 C -20 -60 25 -55 35 -15 Z" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <!-- Caudal tail -->
+    <path d="M -45 0 C -90 -30 -90 30 -45 0 Z" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <!-- Sleek Velvety Body -->
+    <ellipse cx="0" cy="2" rx="48" ry="20" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    <!-- Silver fleck scales -->
+    <circle cx="-10" cy="-4" r="1.5" fill="#94a3b8" opacity="0.6"/>
+    <circle cx="5" cy="4" r="1.5" fill="#94a3b8" opacity="0.6"/>
+    <circle cx="15" cy="-2" r="1.5" fill="#94a3b8" opacity="0.6"/>
+    <!-- Eye -->
+    <circle cx="34" cy="-2" r="4.5" fill="#020617" stroke="#64748b" stroke-width="1"/>
+    <circle cx="35" cy="-3" r="1.5" fill="#f8fafc"/>
+  </g>
+</svg>
